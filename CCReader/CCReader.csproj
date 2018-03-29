@@ -7,8 +7,8 @@
     <ProjectGuid>{0D308259-4675-4D28-A298-34137B15B98A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LeitorCC</RootNamespace>
-    <AssemblyName>LeitorCC</AssemblyName>
+    <RootNamespace>CCReader</RootNamespace>
+    <AssemblyName>CCReader</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
