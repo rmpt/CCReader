@@ -9,7 +9,7 @@ Classe principal: **CCReaderAPI**
 - O Middleware do cartão de cidadão deve estar instalado. Download pode ser feito **[aqui](https://1drv.ms/f/s!AkLsBHidk5AH2jVcrqr-xsTvuJpu "aqui")**
 
 
-Exemplo
+**Exemplo**
 
 Utilizado as DLL da ultima release, a leitura dos dados pode ser feita da seguinte forma:
 
