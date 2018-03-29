@@ -13,16 +13,6 @@ Classe principal: **CCReaderAPI**
 
 Utilizado as DLL da ultima release, a leitura dos dados pode ser feita da seguinte forma:
 
-	var ccApi = new CCReaderAPI();
-	
-	Citizen citizen;
-	try
-	{
-		citizen = ccApi.Read();
-	}
-	catch (PteidException e)
-	{
-		HandlePteidException(e);
-		return;
-	}
+	var ccApi = new CCReaderAPI();	
+	Citizen citizen = ccApi.Read(); // Colocar dentro de try/catch PteidException
 	// O objecto citizen tem todos os dados do cartão
