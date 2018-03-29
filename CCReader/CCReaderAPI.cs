@@ -10,6 +10,9 @@ namespace LeitorCC
 {
 	public class CCReaderAPI
 	{
+
+		#region private methods
+
 		private string Convert2UTF8(string input)
         {
             return Encoding.UTF8.GetString(Encoding.UTF8.GetBytes(input));
@@ -82,7 +85,16 @@ namespace LeitorCC
 			citizen.Address.ZipCode2	= Convert2UTF8(addr.cp3);
 	    }
 
-		public Citizen Read()
+		#endregion
+
+		#region public methods
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="readAddress">Reading address will promp for password, to avoid it don't read the address.</param>
+		/// <returns></returns>
+		public Citizen Read(bool readAddress = true)
 		{
 			// enable bitmap convertion for CSJ2K
 			BitmapImageCreator.Register();
@@ -96,9 +108,15 @@ namespace LeitorCC
 			ReadIDField(citizen);
 			ReadCertificates(citizen);
 			ReadPicture(citizen);
-			ReadAddress(citizen); // will request address password
+
+			if (readAddress)
+			{
+				ReadAddress(citizen); // will request address password
+			}
 
 			return citizen;
 		}
+
+		#endregion
 	}
 }
