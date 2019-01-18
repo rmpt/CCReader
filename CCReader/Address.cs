@@ -16,5 +16,19 @@ namespace LeitorCC
 		public string Floor { get; set; }
 		public string ZipCode1 { get; set; }
 		public string ZipCode2 { get; set; }
-	}
+        public string StreetType { get; set; }
+        /// <summary>
+        /// Localidade Postal
+        /// </summary>
+        public string Postal { get; set; }
+        /// <summary>
+        /// Concelho
+        /// </summary>
+        public string Municipality { get; set; }
+        public string Side { get; set; }
+        /// <summary>
+        /// Lugar
+        /// </summary>
+        public string Place { get; set; }
+    }
 }

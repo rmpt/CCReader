@@ -3,17 +3,17 @@ using System;
 using System.IO;
 using eidpt;
 using LeitorCC;
-using NUnit.Framework;
 using System.Drawing;
 using System.Drawing.Imaging;
+using NUnit.Framework;
 
 namespace LeitorCCTestes
 {
-	[TestFixture]
-	public class CCReaderTests
+    [TestFixture]
+    public class CCReaderTests
 	{
 		[Test]
-		public void TestMethod1()
+		void ReadCCTest()
 		{
 			var ccApi = new CCReaderAPI();
 

@@ -83,6 +83,11 @@ namespace LeitorCC
 		    citizen.Address.Floor		= Convert2UTF8(addr.floor);
 			citizen.Address.ZipCode1	= Convert2UTF8(addr.cp4);
 			citizen.Address.ZipCode2	= Convert2UTF8(addr.cp3);
+            citizen.Address.StreetType  = Convert2UTF8(addr.streettype);
+            citizen.Address.Postal      = Convert2UTF8(addr.postal);
+            citizen.Address.Municipality = Convert2UTF8(addr.municipality);
+            citizen.Address.Side        = Convert2UTF8(addr.side);
+            citizen.Address.Place       = Convert2UTF8(addr.place);
 	    }
 
 		#endregion
