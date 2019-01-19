@@ -13,7 +13,7 @@ namespace LeitorCCTestes
     public class CCReaderTests
 	{
 		[Test]
-		void ReadCCTest()
+		public void ReadCCTest()
 		{
 			var ccApi = new CCReaderAPI();
 
@@ -55,7 +55,13 @@ namespace LeitorCCTestes
 			Console.WriteLine(string.Format("   ZipCode1: {0}", citizen.Address.ZipCode1));
 			Console.WriteLine(string.Format("   ZipCode2: {0}", citizen.Address.ZipCode2));
 
-			if(citizen.Picture != null)
+            Console.WriteLine(string.Format("   StreetType: {0}", citizen.Address.StreetType));
+            Console.WriteLine(string.Format("   Postal: {0}", citizen.Address.Postal));
+            Console.WriteLine(string.Format("   Municipality: {0}", citizen.Address.Municipality));
+            Console.WriteLine(string.Format("   Side: {0}", citizen.Address.Side));
+            Console.WriteLine(string.Format("   Place: {0}", citizen.Address.Place));
+
+            if (citizen.Picture != null)
             {
 				Bitmap bitmap;
 				using (var ms = new MemoryStream(Convert.FromBase64String(citizen.Picture)))
@@ -66,8 +72,6 @@ namespace LeitorCCTestes
 				bitmap.Save(ccPictureFilePath, ImageFormat.Jpeg);
 				Console.WriteLine(string.Format("Picture saved at: {0}", ccPictureFilePath));
             }
-
-			Console.ReadLine(); // just to see the output
 		}
 
 
